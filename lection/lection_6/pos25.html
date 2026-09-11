@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--saved from url=(0014)about:internet-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 25</title>
+    <script>
+        var bcw, bch, doc;
+
+        function init() {
+            bcw = document.body.clientWidth - 40;
+            bch = document.body.clientHeight - 40;
+            doc = document.getElementById('rr').style;
+        }
+
+        function go(e) {
+            e = e || event;
+            var xm = e.clientX;
+            var ym = e.clientY;
+            var xs = parseInt(doc.left) + 20;
+            var ys = parseInt(doc.top) + 20;
+            var sq = (xs - xm) * (xs - xm) + (ys - ym) * (ys - ym);
+            if (sq < 2500) {
+                doc.left = bcw * Math.random();
+                doc.top  = bch * Math.random();
+            }
+        }
+
+        window.onload = init;
+    </script>
+</head>
+
+<body style="background-color: green;">
+    <p style="text-align: center; font-family: Arial; color: white;">
+        Попробуй щелкнуть
+    </p>
+    <img id="rr" src="../image/pic1.png" style="height: 40px; position: absolute; top: 200px; left: 200px;" onload="init()" onmousemove="go(event)">
+</body>
+</html>
