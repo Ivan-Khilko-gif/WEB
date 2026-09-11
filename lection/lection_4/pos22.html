@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 22</title>
+    <script>
+        function func1() {document.getElementById('rr1').src="../image/pic1.png"};
+        function func2() {document.getElementById('rr1').src="../image/pic2.png"};
+    </script>
+</head>
+
+<body style="background-color: green;">
+    <img id="rr1" src="..\image\pic1.png" style="height: 150;">
+    <p style="color:yellow">Пример использования формы с кнопками</p>
+    <form>
+        <input type="button" value="Первая" onclick="func1()">
+        <input type="button" value="Вторая" onclick="func2()">
+    </form>
+</body>
+
+</html>

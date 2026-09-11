@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 20</title>
+    <script>
+        function func1(color, text) {
+            document.getElementById("tp1").style.backgroundColor = color;
+            document.getElementById("tp1").value = text;
+        }
+    </script>
+
+</head>
+
+<body style="background-color: green;">
+    <p style="color:yellow">Пример использования формы с кнопками</p>
+    <form>
+        <input id = "tp1"type="text" size=32 value="" style = "text-align: center; field-sizing: content;"><br>
+        <input style ="background-color: pink;" type="button" value="Первая" onclick="func1('pink', 'первая')">
+        <input style ="background-color: lightblue"type="button" value="Вторая" onclick="func1('lightblue','вторая кнопочка')">
+        <input style ="background-color: lightgreen;"type="button" value="Третья" onclick="func1('lightgreen', 'третья кнопк')">
+    </form>
+</body>
+
+</html>

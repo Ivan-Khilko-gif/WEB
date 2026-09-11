@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 10</title>
+    <script>
+        function func10() {
+            myWin = open("Ivan.html", "newWindow",
+                "width=400,height=300,status=no,toolbar=no,menubar=no"); 
+        }
+        function func1() {
+            myWin.resizeTo(500,400)
+         };
+        function func2() {
+            //alert('Вы нажали вторую кнопку') 
+            myWin.moveTo(50,50)
+        };
+        function func3() { 
+            //alert(document.title ="Новый заголовок") 
+            close() 
+         };
+    </script>
+
+</head>
+
+<body style="background-color: green;">
+    <p style="color:yellow">Пример использования формы с кнопками</p>
+    <form>
+        <input type="button" value="Первая" onclick="func1()">
+        <input type="button" value="Вторая" onclick="func2()">
+        <input type="button" value="Третья" onclick="func3()">
+        <input type="button" value="Третья" onclick="func10()">
+    </form>
+</body>
+
+</html>

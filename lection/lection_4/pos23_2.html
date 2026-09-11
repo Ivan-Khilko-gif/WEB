@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример 23_2</title>
+    <script>
+        function func1() {document.getElementById('rr1').src="../image/pic1.png"};
+        var n = 0;
+        var pic = ["../image/pic1.png","../image/pic2.png"]
+        function func2() {
+            n = (n+1)%2;
+            document.getElementById('rr1').src=pic[n];
+
+        };
+    </script>
+</head>
+
+<body style="background-color: green;">
+    <img id="rr1" src="../image/pic1.png" style="height: 150;" onclick="func2()">
+    <p style="color:yellow">Пример использования формы с кнопками</p>
+    <form>
+        <input type="button" value="Первая" onclick="func1()">
+        <input type="button" value="Вторая" onclick="func2()">
+    </form>
+</body>
+
+</html>
