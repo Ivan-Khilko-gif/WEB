@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurelius - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <header class="header">
+        <div class="logo">
+          <span class="logo-icon">Ω</span>
+          <span class="logo-text">Aurelius</span>
+        </div>
+        <nav class="nav-links">
+          <!-- Ссылка-якорь на блок с ID "projects-section" -->
+          <a href="#projects-section">Проекты</a>
+          <!-- Ссылка на другую страницу вашего сайта (которую нужно будет создать) -->
+          <a href="archive.html">Архив</a>
+          <!-- ЗАМЕНИТЕ ССЫЛКУ на ваш реальный профиль GitHub -->
+          <a
+            href="https://github.com/Ivan-Khilko-gif"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="badge-outline">портфолио</div>
+          <h1 class="hero-title">Мои учебные проекты</h1>
+          <p class="hero-description">
+            Короткий список учебных работ, экспериментов и практических проектов
+            по<br />
+            интерфейсу, визуализации и коду.
+          </p>
+        </section>
+
+        <!-- Добавили id="projects-section" для плавной прокрутки из шапки -->
+        <section id="projects-section" class="projects">
+          <div class="section-label"><span class="dot"></span> ПРОЕКТЫ</div>
+          <h2 class="section-title">Последние работы</h2>
+
+          <div class="cards-grid">
+            <!-- Карточка 1: Лекция -->
+            <article class="card">
+              <div
+                class="card-image"
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    rgba(20, 20, 40, 1) 0%,
+                    rgba(10, 20, 50, 1) 100%
+                  );
+                "
+              ></div>
+              <div class="card-content">
+                <h3 class="card-title">Лекция 1: Введение</h3>
+                <p class="card-text">
+                  Теоретический материал по основам веб-разработки. Базовые
+                  принципы работы, структура документов и стилизация.
+                </p>
+                <div class="card-actions">
+                  <!-- Ссылка ведет в архив и просит открыть вкладку лекций -->
+                  <a href="archive.html#lectures" class="btn btn-primary"
+                    >В АРХИВ ЛЕКЦИЙ &rarr;</a
+                  >
+                  <a
+                    href="https://github.com/Ivan-Khilko-gif/WEB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                    >ПОСМОТРЕТЬ КОД &lt; &gt;</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 2: Практика -->
+            <article class="card">
+              <div
+                class="card-image"
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    rgba(30, 30, 40, 1) 0%,
+                    rgba(20, 20, 30, 1) 100%
+                  );
+                "
+              ></div>
+              <div class="card-content">
+                <h3 class="card-title">Практическая работа 1</h3>
+                <p class="card-text">
+                  Закрепление теории на практике. Верстка макета, настройка
+                  шрифтов и адаптация под разные экраны.
+                </p>
+                <div class="card-actions">
+                  <!-- Ссылка ведет в архив и просит открыть вкладку практики -->
+                  <a href="archive.html#practice" class="btn btn-primary"
+                    >В АРХИВ ПРАКТИКИ &rarr;</a
+                  >
+                  <a
+                    href="https://github.com/Ivan-Khilko-gif/WEB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                    >ПОСМОТРЕТЬ КОД &lt; &gt;</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Карточка 3: Лабораторная -->
+            <article class="card">
+              <div
+                class="card-image"
+                style="
+                  background: linear-gradient(
+                    180deg,
+                    rgba(40, 30, 30, 1) 0%,
+                    rgba(25, 20, 20, 1) 100%
+                  );
+                "
+              ></div>
+              <div class="card-content">
+                <h3 class="card-title">Лабораторная работа 1</h3>
+                <p class="card-text">
+                  Глубокое погружение в разработку. Написание логики, работа с
+                  DOM-деревом и обработка событий.
+                </p>
+                <div class="card-actions">
+                  <!-- Ссылка ведет в архив и просит открыть вкладку лаб -->
+                  <a href="archive.html#labs" class="btn btn-primary"
+                    >В АРХИВ ЛАБ &rarr;</a
+                  >
+                  <a
+                    href="https://github.com/Ivan-Khilko-gif/WEB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                    >ПОСМОТРЕТЬ КОД &lt; &gt;</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-left">
+          <div class="logo">
+            <span class="logo-icon">Ω</span>
+            <span class="logo-text">Aurelius</span>
+          </div>
+          <p class="footer-desc">Портфолио учебных проектов и экспериментов</p>
+        </div>
+        <div class="footer-right">
+          <span class="copyright">&copy; 2026</span>
+          <!-- ЗАМЕНИТЕ ССЫЛКУ на ваш GitHub -->
+          <a
+            href="https://github.com/Ivan-Khilko-gif"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a href="archive.html">Архив</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
