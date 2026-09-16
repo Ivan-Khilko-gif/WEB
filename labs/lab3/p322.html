@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>объект style</title>
+    <script type='text/javascript'>
+        function displ() {
+            if (md.style.display == "") {
+                md.style.display = "none";
+                al.style.paddingleft = "0px";
+            }
+            else {
+                md.style.display = "";
+                al.style.paddingleft = "130px";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#" id="al" onclick="displ();"> test</a>
+    <div id="md" style="display: none;">
+        <img src="..\1\image\5-2.png" onclick="displ();">
+    </div>
+</body>
+
+</html>

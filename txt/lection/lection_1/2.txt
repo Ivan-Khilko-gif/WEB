@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест объекта Document</title>
+    <script>
+        function showDocumentInfo() {
+            let info = "Заголовок: " + document.title + "\n";
+            info += "URL: " + document.URL + "\n";
+            info += "Последнее изменение: " + document.lastModified;
+            
+            alert(info);
+        }
+
+        function writeDynamicContent() {
+            document.open();
+            document.writeln("<h1 style='color: blue;'>Документ перезаписан!</h1>");
+            document.writeln("<p>Этот контент был сгенерирован с помощью <b>document.writeln()</b></p>");
+            document.writeln("<button onclick='location.reload()'>Вернуть исходную страницу</button>");
+            document.close();
+        }
+    </script>
+</head>
+<body>
+    <h2>Примеры работы с объектом document</h2>
+    
+    <p>Выделите этот текст мышкой, а затем нажмите кнопку ниже, чтобы прочитать его через <code>document.getSelection()</code>.</p>
+    
+    <button onclick="alert('Выделенный текст: ' + document.getSelection().toString())">
+        Показать выделенный текст
+    </button>
+    <br><br>
+    
+    <button onclick="showDocumentInfo()">Показать свойства document</button>
+    <button onclick="writeDynamicContent()">Перезаписать документ (write/close)</button>
+</body>
+</html>

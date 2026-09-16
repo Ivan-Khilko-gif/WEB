@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Универсальные</title>
+    <script type='text/javascript'>
+        function f1() {
+            let allDiv = document / getElementsByTagName('DIV');
+            for (let i = 0; i < allDiv.length; i++) allDiv[i].
+        removeAttribute('style', false);
+            document.all[2].innerText = "Общие свойства и методы";
+            document.getElementsByTagName('input')[0].
+        setAttribute('value', 'Уже изменили', false);
+        }
+    </script>
+</head>
+
+<body>
+    <div style='color: aqua;'>Универсальные</div>
+    <div style='color: lime;'>Свойства и Методы</div>
+    <div style='color: magenta;'>Поддерживаются всеми элементами</div>
+    <input type=button onClick="f1();" value="Изменить" style='float: right;'>
+</body>
+
+</html>

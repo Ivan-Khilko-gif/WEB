@@ -1,4 +1,3 @@
-
 :root {
     --bg-color: #0d0d0f;
     --card-bg: #151518;
@@ -220,6 +219,7 @@ body {
 .btn-secondary:hover {
     background-color: rgba(220, 165, 74, 0.1);
 }
+
 /* Подвал (Footer) */
 .footer {
     display: flex;
@@ -243,7 +243,7 @@ body {
 }
 
 .footer-right .copyright {
-    color: var(--border-color); 
+    color: var(--border-color);
 }
 
 .footer-right a {
@@ -267,11 +267,14 @@ body {
     .cards-grid {
         grid-template-columns: 1fr;
     }
-    .header, .footer {
+
+    .header,
+    .footer {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .hero-title {
         font-size: 36px;
     }
@@ -330,8 +333,15 @@ body {
 
 /* Анимация плавного появления карточек */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Карточки архива (без картинки) */
@@ -351,4 +361,124 @@ body {
 .btn-full {
     width: 100%;
     text-align: center;
+}
+
+/* --- Встроенная панель под карточками --- */
+.viewer-panel {
+    margin-top: 40px;
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.viewer-header {
+    padding: 12px 20px;
+    background: #1a1a1a;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewer-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e5a93c;
+    /* Золотистый акцент */
+}
+
+.viewer-close-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.viewer-close-btn:hover {
+    color: #fff;
+}
+
+.viewer-body {
+    position: relative;
+    height: 550px;
+    background: #0a0a0a;
+}
+
+.viewer-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.viewer-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff;
+}
+
+.viewer-footer {
+    padding: 12px 20px;
+    background: #161616;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+}
+
+.viewer-tabs {
+    display: inline-flex;
+    gap: 8px;
+    background: #0d0d0d;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tab-btn.active {
+    background: #e5a93c;
+    color: #000;
+}
+
+.tab-btn:hover:not(.active) {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.viewer-code-container {
+display: none;
+padding: 1rem;
+margin: 0;
+background-color: #1e1e1e;
+color: #d4d4d4;
+max-height: 550px;
+overflow: auto;
+font-family: 'Consolas', 'Monaco', monospace;
+font-size: 0.9rem;
+border-radius: 4px;
+text-align: left;
+}
+
+/* Стили для контейнера кнопок навигации */
+.viewer-nav {
+    display: flex;
+    gap: 10px;
+}
+
+/* Визуал неактивных кнопок (когда мы на первой или последней программе) */
+.viewer-nav button:disabled {
+    opacity: 10.5;
+    cursor: not-allowed;
+    
 }

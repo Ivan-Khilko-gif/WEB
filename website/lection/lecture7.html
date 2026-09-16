@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа 1</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">?</span>
+                <span class="logo-text">Aurelius</span>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">Главная</a>
+                <a href="../archive.html#archive">← Назад в архив</a>
+                <a href="https://github.com/Ivan-Khilko-gif/WEB" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="badge-outline">Лекция 7</div>
+                <h1 class="hero-title">Введение в алгоритмы</h1>
+                <p class="hero-description">
+                    Ниже представлены все практические программы и файлы кода к данной
+                    лекции.
+                </p>
+            </section>
+            <section class="projects">
+                <div class="cards-grid">
+                    <!-- Карточка 1 -->
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="archive-tag">Программа 1</span>
+                            <h3 class="card-title">Модальные окна</h3>
+                            <p class="card-text">
+                                Интерактивная демонстрация трёх типов модальных окон JavaScript.
+                            </p>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-primary open-viewer-btn"
+                                    data-demo="../../lection/lection_7/pos35.html" data-code="../../lection/lection_7/pos35.html"
+                                    data-title="Программа 1: Модальные окна" data-type="demo">
+                                    ЗАПУСТИТЬ →
+                                </button>
+                                <button type="button" class="btn btn-secondary open-viewer-btn"
+                                    data-demo="../../lection/lection_7/pos35.html" data-code="../../lection/lection_7/pos35.html"
+                                    data-title="Программа 1: Модальные окна" data-type="code">
+                                    КОД <>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="archive-tag">Программа 2</span>
+                            <h3 class="card-title">Управление окнами</h3>
+                            <p class="card-text">
+                                Демонстрация программного управления окнами браузера.
+                            </p>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-primary open-viewer-btn"
+                                    data-demo="../../lection/lection_7/pos36.html" data-code="../../lection/lection_7/pos36.html"
+                                    data-title="Программа 2: Управление окнами" data-type="demo">
+                                    ЗАПУСТИТЬ →
+                                </button>
+                                <button type="button" class="btn btn-secondary open-viewer-btn"
+                                    data-demo="../../lection/lection_7/pos36.html" data-code="../../lection/lection_7/pos36.html"
+                                    data-title="Программа 2: Управление окнами" data-type="code">
+                                    КОД <>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="card">
+                        <div class="card-content">
+                            <span class="archive-tag">Программа 3</span>
+                            <h3 class="card-title">Управление окнами браузера</h3>
+                            <p class="card-text">
+                                Интерактивное управление окнами браузера с перемещением фокуса.
+                            </p>
+                            <div class="card-actions">
+                                <button type="button" class="btn btn-primary open-viewer-btn"
+                                    data-demo="../..//lection_7/pos37.html" data-code="../../lection/lection_7/pos37.html"
+                                    data-title="Программа 3: Управление окнами браузера" data-type="demo">
+                                    ЗАПУСТИТЬ →
+                                </button>
+                                <button type="button" class="btn btn-secondary open-viewer-btn"
+                                    data-demo="../../lection/lection_7/pos37.html" data-code="../../lection/lection_7/pos37.html"
+                                    data-title="Программа 3: Управление окнами браузера" data-type="code">
+                                    КОД <>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Панель просмотра -->
+                <div id="viewer-panel" class="viewer-panel">
+                    <div class="viewer-header">
+                        <span id="viewer-title" class="viewer-title">Выберите программу из списка выше</span>
+                        <button type="button" id="viewer-close" class="viewer-close-btn"
+                            title="Скрыть панель">×</button>
+                    </div>
+                    <div class="viewer-body">
+                        <div id="viewer-placeholder" class="viewer-placeholder">
+                            <p>Нажмите <strong>«ЗАПУСТИТЬ»</strong> или <strong>«КОД»</strong> у любой карточки
+                                выше,
+                                чтобы открыть её здесь.</p>
+                        </div>
+                        <iframe id="viewer-iframe" src="" frameborder="0" style="display: none"></iframe>
+                        <pre id="viewer-code-container"
+                            class="viewer-code-container"><code id="viewer-code-content"></code></pre>
+                    </div>
+                    <div class="viewer-footer">
+                        <div class="viewer-tabs">
+                            <button type="button" id="prev-program-btn" class="btn btn-secondary"
+                                disabled>←Пред.</button>
+                            <button type="button" class="tab-btn active" data-tab="demo">▶ Запустить</button>
+                            <button type="button" class="tab-btn" data-tab="code"></> Исходный код</button>
+                            <button type="button" id="next-program-btn" class="btn btn-secondary" disabled>След.
+                                →</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-left">
+                <div class="logo">
+                    <span class="logo-icon">?</span>
+                    <span class="logo-text">Aurelius</span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="../archive.html#archive">Вернуться в архив</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
