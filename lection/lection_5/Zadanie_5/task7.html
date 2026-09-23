@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Задание 7</title>
+</head>
+<script>
+    var step = 0;
+    var dir = 1;
+    function resize() {
+        if (step === 5) dir = -1;
+        if (step === 0) dir = 1;
+        step += dir;
+        document.getElementById('rr1').style.height = (150 + step * 30) + 'px';
+    }
+</script>
+
+<body style="background-color: green">
+    <img id="rr1" src="../../image/pic1.png" style="height:150px" onclick="resize()">
+</body>
+
+</html>

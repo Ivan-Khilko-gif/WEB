@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример 42</title>
+    <script>
+        function func1() {
+            document.getElementById("pp1").value = "";
+        }
+
+        function func2() {
+            var text = document.getElementById("pp1").value;
+            var name = text.split("=")[0];
+            var value = text.split("=")[1];
+
+            localStorage.setItem(name, value);
+            document.getElementById("pp1").value = "";
+        }
+
+        function func3() {
+            var name = document.getElementById("pp1").value;
+            document.getElementById("pp1").value = name + '=' + localStorage.getItem(name);
+        }
+    </script>
+</head>
+<body style="background-color: green;">
+    <p style="color: yellow;">Пример использования LocalStorage</p>
+    <form>
+        <input id="pp1" type="text" size="80" value=""><br> 
+        <input style="background-color: pink;" type="button" value="Очистить" onclick="func1()">
+        <input style="background-color: lightblue;" type="button" value="Записать" onclick="func2()">
+        <input style="background-color: lightgreen;" type="button" value="Вывести" onclick="func3()">
+    </form>
+</body>
+</html>

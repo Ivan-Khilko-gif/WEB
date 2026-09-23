@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Задание 9</title>
+</head>
+<script>
+    var pic = ["../../image/pic1.png", "pic2.png", "pic3.gif"];
+    var n = 0;
+    var step = 0;
+
+    function updatePic() {
+        document.getElementById('rr1').src = pic[n];
+        document.getElementById('btnPrevPic').disabled = (n === 0);
+        document.getElementById('btnNextPic').disabled = (n === pic.length - 1);
+    }
+
+    function updateSize() {
+        document.getElementById('rr1').style.height = (150 + step * 30) + 'px';
+        document.getElementById('btnDecSize').disabled = (step === 0);
+        document.getElementById('btnIncSize').disabled = (step === 5);
+    }
+</script>
+
+<body style="background-color: green">
+    <img id="rr1" src="../../image/pic1.png" style="height:150px"><br><br>
+
+    <button id="btnPrevPic" onclick="n--; updatePic()" disabled>Пред. картинка</button>
+    <button id="btnNextPic" onclick="n++; updatePic()">След. картинка</button>
+    <br><br>
+    <button id="btnDecSize" onclick="step--; updateSize()" disabled>Уменьшить размер</button>
+    <button id="btnIncSize" onclick="step++; updateSize()">Увеличить размер</button>
+</body>
+
+</html>

@@ -1,35 +1,42 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пример 36</title>
+    <title>Пример 37</title>
     <script>
         function func1() {
             var data = new Date();
-            document.getElementById("tp1").value = data;
-        };
+           document.getElementById("pp1").value = data;
+        }
         function func2() {
-            var data = new Date();
-            document.getElementById("tp1").value = data.getUTCHours();
-        };
+           document.getElementById("pp1").value = "";
+        }
         function func3() {
-            var data = new Date(2013,9,7,11,23,24);
-            document.getElementById("tp1").value = data.setHours(23);
-        };
+            var data = new Date();
+            var tn = document.getElementById("pp1").value;
+            tn = parseInt(tn);
+            data.setTime(data.getTime()+ tn*1000*60*60*24);
+                        document.getElementById("pp1").value = data;
+
+        }
+
+        function func4() {
+           document.getElementById("pp1").value = "ivan";
+           document.getElementById("pp1").style.color = "red";
+        }
     </script>
-
 </head>
-
-<body style="background-color: green;">
-    <p style="color:yellow">Пример использования формы с кнопками</p>
+<body style="background-color: green">
+    <p style="color:yellow"> Пример использования формы с кнопками</p>
     <form>
-        <input id = "tp1"type="text" size=64 value="">
-        <input style ="background-color: pink;" type="button" value="Первая" onclick="func1()">
-        <input style ="background-color: lightblue"type="button" value="Вторая" onclick="func2()">
-        <input style ="background-color: lightgreen;"type="button" value="Третья" onclick="func3()">
+        <input id="pp1" type="text" size=80 value="">
+        <br>
+        <input type="button" value="Первая" onclick="func1()" style ="background-color: pink;">
+        <input type="button" value="Вторая" onclick="func2()" style ="background-color: lightblue">
+        <input type="button" value="Третья" onclick="func3()" style="background-color: lightgreen;">
+        <input type="button" value="4" onclick="func4()" style="background-color: green;">
     </form>
+    
 </body>
-
 </html>

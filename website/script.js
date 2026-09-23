@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function checkHash() {
             const hash = window.location.hash.replace('#', '');
-            if (['lectures', 'practice', 'labs'].includes(hash)) {
+            if (['lectures', 'practice', 'labs', 'OKR'].includes(hash)) {
                 activateArchiveTab(hash);
             }
         }

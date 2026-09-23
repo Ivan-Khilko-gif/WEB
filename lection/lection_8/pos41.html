@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример 41</title>
+    <script>
+        function writeCookie(name, value, ds) {
+            var date = new Date();
+            date.setTime(date.getTime() + ds * 1000 * 60 * 60 * 24);
+            document.cookie = name + "=" + escape(value) + "; expires=" + date.toGMTString();
+        }
+
+        function readCookie(name) {
+            var cookie = document.cookie;
+            var search = name + "=";
+            var str = undefined;
+            var offset = 0;
+            var end = 0;
+            if (cookie.length > 0) {
+                offset = cookie.indexOf(search);
+                if (offset != -1) {
+                    offset += search.length;
+                    end = cookie.indexOf(";", offset);
+                    if (end == -1) {
+                        end = cookie.length;
+                    }
+                    str = unescape(cookie.substring(offset, end));
+                }
+            }
+            return str;
+        }
+
+        function func1() {
+            document.getElementById("pp1").value = "";
+        }
+
+        function func2() {
+            text = document.getElementById("pp1").value;
+            name  = text.split(";")[0];
+            value = text.split(";")[1];
+            ds    = text.split(";")[2];
+            writeCookie(name, value, ds);
+            document.getElementById("pp1").value = "";
+        }
+
+        function func3() {
+            name = document.getElementById("pp1").value;
+            document.getElementById("pp1").value = name + "=" + readCookie(name);
+        }
+    </script>
+</head>
+<body style="background-color: green">
+    <p style="color:yellow">Пример использования формы с кнопками</p>
+    <form>
+        <input id="pp1" type="text" size=80 value="">
+        <br>
+        <input type="button" value="Очистить" onclick="func1()" style="background-color: pink;">
+        <input type="button" value="Записать" onclick="func2()" style="background-color: lightblue">
+        <input type="button" value="Вывести" onclick="func3()" style="background-color: lightgreen;">
+    </form>
+</body>
+</html>

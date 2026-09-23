@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Задание 8</title>
+</head>
+<script>
+    var step = 0;
+    function update() {
+        document.getElementById('rr1').style.height = (150 + step * 30) + 'px';
+        document.getElementById('btnDec').disabled = (step === 0);
+        document.getElementById('btnInc').disabled = (step === 5);
+    }
+</script>
+
+<body style="background-color: green">
+    <img id="rr1" src="../../image/pic1.png" style="height:150px"><br>
+    <button id="btnDec" onclick="step--; update()" disabled>Уменьшить</button>
+    <button id="btnInc" onclick="step++; update()">Увеличить</button>
+</body>
+
+</html>

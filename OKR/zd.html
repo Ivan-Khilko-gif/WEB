@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чекбокс</title>
+    <script>
+        function func1() {
+            if (document.getElementById("cb1").checked) {
+                document.getElementById("tp1").style.backgroundColor = "lightgreen";
+                document.getElementById("tp1").value = "отмечен";
+            } else {
+                document.getElementById("tp1").style.backgroundColor = "pink";
+                document.getElementById("tp1").value = "не отмечен";
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: green;">
+    <form>
+        <input id="cb1" type="checkbox" onclick="func1()">
+        <label style="color: yellow;">Отметь</label>
+        <br><br>
+        <input id="tp1" type="text" size="32" value="не отмечен" style="background-color: pink;">
+    </form>
+</body>
+
+</html>
